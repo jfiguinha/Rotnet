@@ -6,3 +6,5 @@ I create this fork in order to explain a working version of this very interestin
 Initial project : https://github.com/d4nst/RotNet
 
 Blog of the project : https://d4nst.github.io/
+
+Go to the wiki section in order to install and try this project
