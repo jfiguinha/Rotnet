@@ -1,0 +1,8 @@
+-IC:\developpement\git\Rotnet\Rotnetcpp\Rotnet_linux
+-IC:\developpement\git\Rotnet\Rotnetcpp\Rotnet_linux\lib\frugally-deep\include
+-IC:\developpement\git\Rotnet\Rotnetcpp\Rotnet_linux\lib\FunctionalPlus-0.2.8-p0\include
+-IC:\developpement\git\Rotnet\Rotnetcpp\Rotnet_linux\lib\json-3.8.0\include
+-IC:\developpement\git\Rotnet\Rotnetcpp\Rotnet_linux\lib\eigen
+-IC:\mingw64\include\opencv4
+-target
+i686-pc-windows-gnu
