@@ -1,0 +1,14 @@
+-I/usr/include/c++/7
+-I/usr/include/x86_64-linux-gnu/c++/7
+-I/usr/include/c++/7/backward
+-I/usr/lib/gcc/x86_64-linux-gnu/7/include
+-I/usr/local/include
+-I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed
+-I/usr/include/x86_64-linux-gnu
+-I/usr/include
+-I/home/figuinha/developpement/git/frugally-deep/frugally-deep
+-I/home/figuinha/developpement/git/frugally-deep/include
+-I/usr/include/eigen3
+-I/home/figuinha/developpement/git/FunctionalPlus-0.2.8-p0/include
+-I/home/figuinha/developpement/git/json-3.8.0/include
+-I/home/figuinha/ffmpeg_build/include/opencv4
