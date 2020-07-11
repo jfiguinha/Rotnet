@@ -78,7 +78,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>C:\developpement\git\Regards\libextern\vcpkg\installed\x64-windows\debug\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\developpement\git\Rotnet\Rotnetcpp\lib\json-3.8.0\include;C:\developpement\git\Rotnet\Rotnetcpp\lib\frugally-deep\include;C:\developpement\git\Rotnet\Rotnetcpp\lib\FunctionalPlus-0.2.8-p0\include;C:\developpement\git\Rotnet\lib\eigen;C:\developpement\git\Regards\libextern\vcpkg\installed\x64-windows\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>..\lib\json-3.8.0\include;..\lib\frugally-deep\include;..\lib\FunctionalPlus-0.2.8-p0\include;..\lib\eigen;C:\developpement\git\Regards\libextern\vcpkg\installed\x64-windows\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
