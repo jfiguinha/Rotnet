@@ -9,7 +9,7 @@ int main()
     cv::cvtColor(image, image, cv::COLOR_BGR2RGB);
     cv::resize(image,dst,size);
     assert(image.isContinuous());
-    const auto model = fdeep::load_model("rotnet_street_view_resnet50_keras2.json");
+    const auto model = fdeep::load_model("model/rotnet_street_view_resnet50_keras2.json");
     // Use the correct scaling, i.e., low and high.
     const auto input = fdeep::tensor_from_bytes(dst.ptr(),
         static_cast<std::size_t>(dst.rows),

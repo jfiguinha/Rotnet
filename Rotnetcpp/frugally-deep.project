@@ -9,15 +9,15 @@
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
         <IncludePath Value="."/>
-        <IncludePath Value="../include"/>
+        <IncludePath Value="./lib/frugally-deep/include"/>
         <IncludePath Value="/usr/include/eigen3"/>
-        <IncludePath Value="/home/figuinha/developpement/git/FunctionalPlus-0.2.8-p0/include"/>
-        <IncludePath Value="/home/figuinha/developpement/git/json-3.8.0/include"/>
+        <IncludePath Value="./lib/FunctionalPlus-0.2.8-p0/include"/>
+        <IncludePath Value="./lib/json-3.8.0/include"/>
         <IncludePath Value="/home/figuinha/ffmpeg_build/include/opencv4"/>
       </Compiler>
       <Linker Options="-Wl,-rpath,'$$ORIGIN' -Wl,-z,origin;">
         <LibraryPath Value="."/>
-        <LibraryPath Value="/home/figuinha/ffmpeg_build/lib"/>
+        <LibraryPath Value="$$HOME/ffmpeg_build/lib"/>
         <Library Value="opencv_core"/>
         <Library Value="opencv_dnn"/>
         <Library Value="opencv_imgproc"/>
