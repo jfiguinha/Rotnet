@@ -23,7 +23,7 @@
     <ProjectGuid>{C251FFA9-99CE-4A77-9AAA-678C7B2C8D15}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Rotnet</RootNamespace>
-    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -42,13 +42,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -72,23 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\developpement\git\Regards\libextern\vcpkg\installed\x86-windows\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>C:\developpement\git\Regards\libextern\vcpkg\installed\x86-windows\debug\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\developpement\git\Regards\libextern\vcpkg\installed\x64-windows\debug\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>..\lib\json-3.8.0\include;..\lib\frugally-deep\include;..\lib\FunctionalPlus-0.2.8-p0\include;..\lib\eigen;C:\developpement\git\Regards\libextern\vcpkg\installed\x64-windows\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>..\lib\opencv\opencv-4.3.0\build\lib\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\lib\json-3.8.0\include;..\lib\frugally-deep\include;..\lib\FunctionalPlus-0.2.8-p0\include;..\lib\eigen;..\lib\opencv\opencv_contrib-master\modules\face\include;..\lib\opencv\opencv-4.3.0\modules\video\include;..\lib\opencv\opencv-4.3.0\modules\stitching\include;..\lib\opencv\opencv-4.3.0\modules\photo\include;..\lib\opencv\opencv-4.3.0\modules\ml\include;..\lib\opencv\opencv-4.3.0\modules\flann\include;..\lib\opencv\opencv-4.3.0\modules\calib3d\include;..\lib\opencv\opencv-4.3.0\modules\features2d\include;..\lib\opencv\opencv-4.3.0\include;..\lib\opencv\opencv-4.3.0\modules\dnn\include;..\lib\opencv\opencv-4.3.0\modules\core\include;..\lib\opencv\opencv-4.3.0\modules\highgui\include;..\lib\opencv\opencv-4.3.0\modules\imgcodecs\include;..\lib\opencv\opencv-4.3.0\modules\imgproc\include;..\lib\opencv\opencv-4.3.0\build\;..\lib\opencv\opencv-4.3.0\modules\objdetect\include;..\lib\opencv\opencv-4.3.0\modules\videoio\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\developpement\git\Regards\libextern\vcpkg\installed\x64-windows\include;C:\developpement\git\Regards\libextern\vcpkg\installed\x64-windows\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\developpement\git\Regards\libextern\vcpkg\installed\x64-windows\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>C:\developpement\git\Regards\libextern\vcpkg\installed\x64-windows\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
-    <IncludePath>C:\developpement\git\Regards\libextern\vcpkg\installed\x64-windows\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>..\lib\opencv\opencv-4.3.0\build\lib\\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\lib\json-3.8.0\include;..\lib\frugally-deep\include;..\lib\FunctionalPlus-0.2.8-p0\include;..\lib\eigen;..\lib\opencv\opencv_contrib-master\modules\face\include;..\lib\opencv\opencv-4.3.0\modules\video\include;..\lib\opencv\opencv-4.3.0\modules\stitching\include;..\lib\opencv\opencv-4.3.0\modules\photo\include;..\lib\opencv\opencv-4.3.0\modules\ml\include;..\lib\opencv\opencv-4.3.0\modules\flann\include;..\lib\opencv\opencv-4.3.0\modules\calib3d\include;..\lib\opencv\opencv-4.3.0\modules\features2d\include;..\lib\opencv\opencv-4.3.0\include;..\lib\opencv\opencv-4.3.0\modules\dnn\include;..\lib\opencv\opencv-4.3.0\modules\core\include;..\lib\opencv\opencv-4.3.0\modules\highgui\include;..\lib\opencv\opencv-4.3.0\modules\imgcodecs\include;..\lib\opencv\opencv-4.3.0\modules\imgproc\include;..\lib\opencv\opencv-4.3.0\build\;..\lib\opencv\opencv-4.3.0\modules\objdetect\include;..\lib\opencv\opencv-4.3.0\modules\videoio\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -119,7 +119,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opencv_calib3dd.lib;opencv_cored.lib;opencv_dnnd.lib;opencv_features2dd.lib;opencv_imgprocd.lib;opencv_imgcodecsd.lib;opencv_highguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_calib3d430d.lib;opencv_core430d.lib;opencv_dnn430d.lib;opencv_features2d430d.lib;opencv_imgproc430d.lib;opencv_imgcodecs430d.lib;opencv_highgui430d.lib;opencv_face430d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -158,9 +158,11 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_calib3d430.lib;opencv_core430.lib;opencv_dnn430.lib;opencv_features2d430.lib;opencv_imgproc430.lib;opencv_imgcodecs430.lib;opencv_highgui430.lib;opencv_face430.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FaceRecognition.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
