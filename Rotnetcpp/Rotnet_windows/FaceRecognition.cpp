@@ -22,6 +22,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <string>
 using namespace cv;
 using namespace cv::face;
 using namespace std;

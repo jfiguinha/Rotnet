@@ -3,6 +3,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="FaceRecognition.cpp"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
@@ -22,6 +23,8 @@
         <Library Value="opencv_dnn"/>
         <Library Value="opencv_imgproc"/>
         <Library Value="opencv_imgcodecs"/>
+        <Library Value="opencv_face"/>
+        <Library Value="opencv_highgui"/>
       </Linker>
       <ResourceCompiler Options=""/>
     </GlobalSettings>

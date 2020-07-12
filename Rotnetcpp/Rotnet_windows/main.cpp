@@ -14,26 +14,22 @@ using namespace std;
 
 int RotateToExifOrientation(const int &angle)
 {
-	if (angle < 45 && angle > 314)
-		return 0;
-	else if (angle > 44 && angle < 135) //Rotate 90
+	if (angle > 44 && angle < 135) //Rotate 90
 		return 6;
 	else if (angle > 134 && angle < 225) //Rotate 180
 		return 3;
-	else
+	else if (angle > 224 && angle < 315)
 		return 8;
 	return 0;
 }
 
 int RotateToOrientation(const int &angle)
 {
-	if (angle < 45 && angle > 314)
-		return 0;
-	else if (angle > 44 && angle < 135) //Rotate 90
+	if (angle > 44 && angle < 135) //Rotate 90
 		return 90;
 	else if (angle > 134 && angle < 225) //Rotate 180
 		return 180;
-	else
+	else if (angle > 224 && angle < 315)
 		return 270;
 	return 0;
 }
@@ -63,7 +59,7 @@ const cv::Scalar meanVal(104.0, 177.0, 123.0);
 //--------------------------------------------------
 //Code From https://github.com/spmallick/learnopencv
 //--------------------------------------------------
-void detectFaceOpenCVDNN(Net net, Mat &frameOpenCVDNN)
+void detectFaceOpenCVDNN(Net net, Mat &frameOpenCVDNN, vector<Mat> & listOfFace)
 {
 	int frameHeight = frameOpenCVDNN.rows;
 	int frameWidth = frameOpenCVDNN.cols;
@@ -92,6 +88,15 @@ void detectFaceOpenCVDNN(Net net, Mat &frameOpenCVDNN)
 				int y2 = static_cast<int>(detectionMat.at<float>(i, 6) * frameHeight);
 
 				cv::rectangle(frameOpenCVDNN, cv::Point(x1, y1), cv::Point(x2, y2), cv::Scalar(0, 255, 0), 22, 4);
+                
+                // Setup a rectangle to define your region of interest
+                cv::Rect myROI(cv::Point(x1, y1), cv::Point(x2, y2));
+
+                // Crop the full image to that image contained by the rectangle myROI
+                // Note that this doesn't copy the data
+                cv::Mat croppedImage = frameOpenCVDNN(myROI);
+                
+                listOfFace.push_back(croppedImage);
 			}
 		}
 	}
@@ -103,7 +108,7 @@ void detectFaceOpenCVDNN(Net net, Mat &frameOpenCVDNN)
 	}
 }
 
-void FaceDetection(cv::Mat & image)
+void FaceDetection(cv::Mat & image, vector<Mat> & listOfFace)
 {
 
 
@@ -129,11 +134,27 @@ void FaceDetection(cv::Mat & image)
 	}
 
 
-	detectFaceOpenCVDNN(net, image);
+	detectFaceOpenCVDNN(net, image, listOfFace);
+}
+
+void ImageToJpegBuffer(cv::Mat & image, std::vector<uchar> & buff)
+{
+    //std::vector<uchar> buff;//buffer for coding
+    std::vector<int> param(2);
+    param[0] = cv::IMWRITE_JPEG_QUALITY;
+    param[1] = 80;//default(95) 0-100
+    cv::imencode(".jpg", image, buff, param);
+}
+
+void ReadFromJpegBuffer(cv::Mat & image, char * buf, const int &size)
+{
+    std::vector<char> data(buf, buf + size);
+    image = imdecode(Mat(data), 1);
 }
 
 int main()
 {
+    vector<Mat> listOfFace;
 	cv::Mat image = cv::imread("D:\\photos\\test\\photo.jpg");
 	//cv::cvtColor(image, image, cv::COLOR_BGR2RGB);
 	
@@ -155,9 +176,19 @@ int main()
 	//cv::imwrite("rotated_im.png", dst);
 	//imshow("Rotate", dst);
 
-	FaceDetection(dst);
+	FaceDetection(dst, listOfFace);
 	k = waitKey();
     std::cout << angle << std::endl;
 
 	cv::imwrite("D:\\photos\\test\\photo_out.jpg", dst);
+    
+    //Save to jpeg buffer
+
+    /*
+    std::vector<uchar> buff;//buffer for coding
+    std::vector<int> param(2);
+    param[0] = cv::IMWRITE_JPEG_QUALITY;
+    param[1] = 80;//default(95) 0-100
+    cv::imencode(".jpg", mat, buff, param);
+    */
 }

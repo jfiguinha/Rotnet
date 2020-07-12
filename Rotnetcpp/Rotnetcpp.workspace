@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="Rotnetcpp" Database="" Version="10000">
-  <Project Name="frugally-deep" Path="frugally-deep.project" Active="Yes"/>
+  <Project Name="frugally-deep" Path="Rotnet_linux/frugally-deep.project" Active="No"/>
+  <Project Name="frugally-deep_windows" Path="Rotnet_windows/frugally-deep_windows.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="frugally-deep" ConfigName="Debug"/>
+      <Project Name="frugally-deep" ConfigName="Debug"/>
+      <Project Name="frugally-deep_windows" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="frugally-deep" ConfigName="Release"/>
+      <Project Name="frugally-deep" ConfigName="Release"/>
+      <Project Name="frugally-deep_windows" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
